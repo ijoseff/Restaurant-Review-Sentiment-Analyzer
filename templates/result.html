@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <title>Restaurant Review Sentiment Analyzer</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='food-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" rel="stylesheet" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'> RESTAURANT REVIEW SENTIMENT ANALYZER 🍽️ </h2>
+            <div class='description'>
+    			<p>A MACHINE LEARNING WEB APPLICATION. WITH FLASK FRAMEWORK. DEPLOYED IN HEROKU.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='safe'>Positive Review!</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='c-positive.gif') }}" alt="Positive Review">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>Negative Review!</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='c-negative.gif') }}" alt="Negative Review">
+			{% endif %}
+
+		</div>
+
+		<!-- Footer -->
+		<div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/ijoseff"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/ijoseff/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Copyright © Joseff Tan 2020 </p>
+        </div>
+
+	</body>
+</html>
