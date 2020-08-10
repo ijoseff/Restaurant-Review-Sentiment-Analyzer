@@ -23,11 +23,11 @@
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==1 %}
-				<h1>Prediction: <span class='safe'>Positive Review!</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='c-positive.gif') }}" alt="Positive Review">
+				<h1>Prediction: <span class='safe'>Positive Review!</span></h1>
 			{% elif prediction==0 %}
-				<h1>Prediction: <span class='danger'>Negative Review!</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='c-negative.gif') }}" alt="Negative Review">
+				<h1>Prediction: <span class='danger'>Negative Review!</span></h1>
 			{% endif %}
 
 		</div>
